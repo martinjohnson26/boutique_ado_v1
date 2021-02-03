@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
-# Register your models here.
 
+# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -12,6 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
         'rating',
         'image',
     )
+
     ordering = ('sku',)
 
 
