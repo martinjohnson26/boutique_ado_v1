@@ -38,7 +38,7 @@ body {
     color: white;
 }
 
-.btn-outline-black{
+.btn-outline-black {
     background: white;
     color: black !important;/* use important to override link colours for <a> elements*/
     border: 1px solid black;
@@ -48,7 +48,7 @@ body {
 .btn-outline-black:active,
 .btn-outline-black:focus{
     background: black;
-    color: white!important;
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -88,7 +88,7 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-.btt-button{
+.btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
@@ -96,7 +96,9 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link{
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 /* -------------------------------- Media Queries */
