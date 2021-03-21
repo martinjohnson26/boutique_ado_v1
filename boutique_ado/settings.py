@@ -75,7 +75,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -118,14 +118,12 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
-#   DATABASES = {
-#       'default': {
-#           'ENGINE': 'django.db.backends.sqlite3',
-#           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#       }
-#   }
-
-DATABASES = {dj_database_url.parse(postgres://mlyzviufhyzajd:747e1fc5265c02fe0d7d11864922116a2119e38f5a97b6f9f4c4acbf30417a63@ec2-54-247-158-179.eu-west-1.compute.amazonaws.com:5432/d88jp4tphqo5nm)}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      }
+   }
 
 
 # Password validation
@@ -193,7 +191,7 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-    
+
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
